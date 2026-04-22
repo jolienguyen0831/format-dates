@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.TimeZone;
 
 public class FormatDates {
     public static void main(String[] args) {
@@ -26,7 +25,7 @@ public class FormatDates {
         System.out.println(format3);
 
         ZonedDateTime cstTime = ZonedDateTime.now(ZoneId.of("America/Chicago"));
-        DateTimeFormatter formatter4 = DateTimeFormatter.ofPattern("HH:mm dd-mm-yyyy");
+        DateTimeFormatter formatter4 = DateTimeFormatter.ofPattern("HH:mm dd-MM-yyyy");
         System.out.println(cstTime.format(formatter4));
     }
 }
